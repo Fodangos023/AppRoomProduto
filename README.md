@@ -33,7 +33,7 @@ app/src/main/
 ## Prints do app
 
 ![Tela inicial](prints/tela-inicial.png)
-![Logcat com a listagem](prints/logcat.png)
+![Logcat com a listagem](prints/logcat.PNG)
 
 ---
 
