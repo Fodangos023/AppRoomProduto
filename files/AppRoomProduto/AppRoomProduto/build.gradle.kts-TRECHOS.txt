@@ -1,0 +1,23 @@
+// Passo 2: alteracoes no build.gradle.kts (Module :app)
+// Mantenha o que o Android Studio gerou e ADICIONE apenas as linhas marcadas.
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt") // <- ADICIONE
+}
+
+android {
+    // ... (mantenha o que ja existe)
+    buildFeatures {   // <- ADICIONE
+        viewBinding = true
+    }
+}
+
+dependencies {
+    val room_version = "2.6.1" // <- ADICIONE estas 4 linhas
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    // ... (mantenha as dependencias que ja existem)
+}
